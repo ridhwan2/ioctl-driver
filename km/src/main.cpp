@@ -28,7 +28,7 @@ namespace driver {
 
         constexpr ULONG write =
             CTL_CODE(FILE_DEVICE_UNKNOWN, 0x698, METHOD_BUFFERED, FILE_SPECIAL_ACCESS);
-    }  // namespace codes
+    }
 
     struct Request {
         HANDLE process_id;
