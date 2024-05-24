@@ -10,9 +10,7 @@ extern "C" {
                                              PSIZE_T ReturnSize);
 }
 
-// Helper for kernel debug printing.
 void debug_print(PCSTR text) {
-// Otherwise you cannot build in Release mode.
 #ifndef DEBUG
     UNREFERENCED_PARAMETER(text);
 #endif  // !DEBUG
@@ -22,20 +20,16 @@ void debug_print(PCSTR text) {
 
 namespace driver {
     namespace codes {
-        // used to setup the driver.
         constexpr ULONG attach =
             CTL_CODE(FILE_DEVICE_UNKNOWN, 0x696, METHOD_BUFFERED, FILE_SPECIAL_ACCESS);
 
-        // read process memory
         constexpr ULONG read =
             CTL_CODE(FILE_DEVICE_UNKNOWN, 0x697, METHOD_BUFFERED, FILE_SPECIAL_ACCESS);
 
-        // write process memory
         constexpr ULONG write =
             CTL_CODE(FILE_DEVICE_UNKNOWN, 0x698, METHOD_BUFFERED, FILE_SPECIAL_ACCESS);
     }  // namespace codes
 
-    // shared between user mode & kernel mode.
     struct Request {
         HANDLE process_id;
 
@@ -69,10 +63,8 @@ namespace driver {
 
         NTSTATUS status = STATUS_UNSUCCESSFUL;
 
-        // we need this to determine which code was passed through
         PIO_STACK_LOCATION stack_irp = IoGetCurrentIrpStackLocation(irp);
 
-        // access the request object sent from user mode
         auto request = reinterpret_cast<Request*>(irp->AssociatedIrp.SystemBuffer);
 
         if (stack_irp == nullptr || request == nullptr) {
@@ -80,7 +72,6 @@ namespace driver {
             return status;
         }
 
-        // the target process we want access to
         static PEPROCESS target_process = nullptr;
 
         const ULONG control_code = stack_irp->Parameters.DeviceIoControl.IoControlCode;
@@ -118,7 +109,6 @@ namespace driver {
 
 }  // namespace driver
 
-// Our "real" entry point.
 NTSTATUS driver_main(PDRIVER_OBJECT driver_object, PUNICODE_STRING registry_path) {
     UNREFERENCED_PARAMETER(registry_path);
 
@@ -147,15 +137,12 @@ NTSTATUS driver_main(PDRIVER_OBJECT driver_object, PUNICODE_STRING registry_path
 
     debug_print("[+] symbolic link established\n");
 
-    // allow us to send small amounts of data between um/km
     SetFlag(device_object->Flags, DO_BUFFERED_IO);
 
-    // set the driver handlers to our functions with our logic
     driver_object->MajorFunction[IRP_MJ_CREATE] = driver::create;
     driver_object->MajorFunction[IRP_MJ_CLOSE] = driver::close;
     driver_object->MajorFunction[IRP_MJ_DEVICE_CONTROL] = driver::device_control;
 
-    // we have initialized our device
     ClearFlag(device_object->Flags, DO_DEVICE_INITIALIZING);
 
     debug_print("[+] driver loaded\n");
@@ -163,7 +150,6 @@ NTSTATUS driver_main(PDRIVER_OBJECT driver_object, PUNICODE_STRING registry_path
     return status;
 }
 
-// mappers "entry point"
 NTSTATUS DriverEntry() {
     debug_print("[+] kernel loaded\n");
 
