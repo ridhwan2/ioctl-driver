@@ -1,7 +1,7 @@
 # Information
 - Compiling the project requires [Visual Studio](https://visualstudio.microsoft.com/downloads/) & the [WDK](https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk#download-icon-for-wdk-step-3-install-wdk).
 - The offsets are only up to date as of [...](https://steamdb.info/changelist/23669509/)
-- The driver can be mapped using [kdmapper](https://github.com/TheCruZ/kdmapper).
+- The driver can be mapped using [kdmapper](https://github.com/TheCruZ/kdmapper) (drag km.sys over the executable).
 
 ## Misc
 - Assuming that you are only reading and not writing, and the cheat functionality remains within the kernel there shouldn't be any problems with VAC or any other other usermode anticheat.
