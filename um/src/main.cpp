@@ -66,20 +66,16 @@ static std::uintptr_t get_module_base(const DWORD pid, const wchar_t* module_nam
 
 namespace driver {
     namespace codes {
-        // driver setup
         constexpr ULONG attach =
             CTL_CODE(FILE_DEVICE_UNKNOWN, 0x696, METHOD_BUFFERED, FILE_SPECIAL_ACCESS);
 
-        // wpm
         constexpr ULONG read =
             CTL_CODE(FILE_DEVICE_UNKNOWN, 0x697, METHOD_BUFFERED, FILE_SPECIAL_ACCESS);
 
-        // rpm
         constexpr ULONG write =
             CTL_CODE(FILE_DEVICE_UNKNOWN, 0x698, METHOD_BUFFERED, FILE_SPECIAL_ACCESS);
-    }  // namespace codes
+    } 
 
-    // bridge between usermode and kernelmode
     struct Request {
         HANDLE process_id;
 
