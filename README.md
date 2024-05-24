@@ -8,9 +8,9 @@
 - However, this driver should never be mapped or present within the operating system while an anticheat like EAC, Battle-Eye, Vanguard, Faceit, Richochet, [etc](https://levvvel.com/games-with-kernel-level-anti-cheat-software/) are running.
 
 ## Credits
-[cazz](https://www.youtube.com/@cazz)
-[dumper](https://github.com/a2x/cs2-dumper)
-[uc](https://www.unknowncheats.me/forum/counter-strike-2-a/606947-bomb-esp-help.html)
+- [cazz](https://www.youtube.com/@cazz)
+- [dumper](https://github.com/a2x/cs2-dumper)
+- [uc](https://www.unknowncheats.me/forum/counter-strike-2-a/606947-bomb-esp-help.html)
 
 
 ## License
