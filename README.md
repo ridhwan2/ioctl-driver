@@ -15,4 +15,4 @@
 
 ## License
 > [MIT](https://opensource.org/license/mit) ridhwan 2024
-> - [] I have read the above.
+> - [ ] I have read the above.
