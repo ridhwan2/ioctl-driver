@@ -7,7 +7,7 @@
 ## Misc
 - Assuming that you are only reading and not writing, and the cheat functionality remains within the kernel there shouldn't be any problems with VAC or any other other usermode anticheat.
 - However, this driver should never be mapped or present within the operating system while an anticheat like EAC, Battle-Eye, Vanguard, Faceit, Richochet, [etc](https://levvvel.com/games-with-kernel-level-anti-cheat-software/) are running.
-- This project is more of a base than a fully usable software, it can be used to learn or be developed further, most of the code is not written by me.
+- This project is more of a base than a fully usable software, it can be used to learn or be developed further.
 
 ## Credits
 - [youtube](https://www.youtube.com/results?search_query=how+to+make+a+kernel+driver)
