@@ -4,7 +4,7 @@
 - The driver can be mapped using [kdmapper](https://github.com/TheCruZ/kdmapper).
 
 ## Misc
-- Assuming that you are only reading and not writing, and the cheat functionality remains within the kernel there shouldn't be any problems with VAC or other usermode anticheat.
+- Assuming that you are only reading and not writing, and the cheat functionality remains within the kernel there shouldn't be any problems with VAC or any other other usermode anticheat.
 - However, this driver should never be mapped or present within the operating system while an anticheat like EAC, Battle-Eye, Vanguard, Faceit, Richochet, [etc](https://levvvel.com/games-with-kernel-level-anti-cheat-software/) are running.
 
 ## Credits
