@@ -154,7 +154,7 @@ int main() {
 
             bool isC4Planted = driver::read_memory<bool>(driver, client + cs2_dumper::offsets::client_dll::dwPlantedC4 - 0x8);
             if (isC4Planted) {
-                std::cout << "[info] c4 is planted";
+                std::cout << "[driver -> info] c4 is planted";
                 std::cin.get();
             } else {
                 std::cout << "[driver -> info] c4 is not planted";
