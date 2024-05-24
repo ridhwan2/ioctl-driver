@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <EnableVerifier>False</EnableVerifier>
+    <AllDrivers>False</AllDrivers>
+    <VerifyProjectOutput>True</VerifyProjectOutput>
+    <VerifyDrivers />
+    <VerifyFlags>133563</VerifyFlags>
+    <SignMode>TestSign</SignMode>
+    <ProductionCertificate>
+    </ProductionCertificate>
+    <CrossCertificateFile>
+    </CrossCertificateFile>
+    <TestCertificate>CN="WDKTestCert kenca,133609881627583726" | 82EACBAC5D024447070AF7DB2CC70178BBA5B4B2</TestCertificate>
+  </PropertyGroup>
+</Project>
