@@ -80,7 +80,6 @@ namespace driver {
                 status = PsLookupProcessByProcessId(request->process_id, &target_process);
                 break;
 
-                // read process memory implementation
             case codes::read:
                 if (target_process != nullptr)
                     status = MmCopyVirtualMemory(target_process, request->target,
@@ -115,7 +114,6 @@ NTSTATUS driver_main(PDRIVER_OBJECT driver_object, PUNICODE_STRING registry_path
     UNICODE_STRING device_name = {};
     RtlInitUnicodeString(&device_name, L"\\Device\\IO");
 
-    // Create driver device obj.
     PDEVICE_OBJECT device_object = nullptr;
     NTSTATUS status = IoCreateDevice(driver_object, 0, &device_name, FILE_DEVICE_UNKNOWN,
                                      FILE_DEVICE_SECURE_OPEN, FALSE, &device_object);
