@@ -1,6 +1,6 @@
 # Information
 - Compiling the project requires [Visual Studio](https://visualstudio.microsoft.com/downloads/) & the [WDK](https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk#download-icon-for-wdk-step-3-install-wdk).
-- The offsets are only up to date as of [...](https://steamdb.info/changelist/23669509/)
+- The offsets are only up to date as of [...](https://steamdb.info/changelist/23684880/)
 - The driver can be mapped using [kdmapper](https://github.com/TheCruZ/kdmapper).
 - Tested on Windows 11 (22631.3593)
 
