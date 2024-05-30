@@ -10,9 +10,9 @@
 - This project is more of a base than a fully usable software, it can be used to learn or be developed further.
 
 ## Credits
-- [youtube](https://www.youtube.com/results?search_query=how+to+make+a+kernel+driver) For the driver.
-- [dumper](https://github.com/a2x/cs2-dumper) For offsets.
-- [uc](https://www.unknowncheats.me/forum/counter-strike-2-a/606947-bomb-esp-help.html) Checking weather the bomb is planted or not. 
+- [youtube](https://www.youtube.com/results?search_query=how+to+make+a+kernel+driver). For the driver.
+- [dumper](https://github.com/a2x/cs2-dumper). For offsets.
+- [uc](https://www.unknowncheats.me/forum/counter-strike-2-a/606947-bomb-esp-help.html). Checking weather the bomb is planted or not. 
 
 
 ## License
