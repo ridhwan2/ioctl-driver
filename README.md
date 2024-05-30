@@ -11,7 +11,7 @@
 
 ## Credits
 - [youtube](https://www.youtube.com/results?search_query=how+to+make+a+kernel+driver)
-- - For the driver.
+- - For the driver & usermode.
 - [dumper](https://github.com/a2x/cs2-dumper)
 - [uc](https://www.unknowncheats.me/forum/counter-strike-2-a/606947-bomb-esp-help.html)
 
